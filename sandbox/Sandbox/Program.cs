@@ -50,8 +50,41 @@ class Program
 
         // Functions
         // in TitleCase
+
+        string welcome = "Welcome to the Journal Program!";
+        string options = "Please select one of the following choices: \n1. Write\n2. Display\n3. Load\n4. Save\n5. Quit\nWhat would you like to do? ";
         
+        Console.WriteLine(welcome);
+        Console.Write(options);
+        string input = Console.ReadLine();
 
+        DateTime theCurrentTime = DateTime.Now;
+        string dateText = theCurrentTime.ToShortDateString();
+        // string date = DateTime.Now.ToString("dddd, ");
+        string timeDay = DateTime.Now.ToString("HH:mm on dddd, dd MMMM yyyy");
+        Console.WriteLine($"Written at {timeDay}");
 
+        Console.WriteLine();
+        
+        // Count the number of lines in the text file
+        int countLines = File.ReadLines("prompts.txt").Count();
+        // Initiate new random
+        Random random = new Random();
+        int randomLine = random.Next(countLines);
+
+        // use streamreader to read the file
+        StreamReader reader = new StreamReader("prompts.txt");
+
+        // Loop through file until random line is reached
+        for (int i = 0; i < randomLine; i++)
+        {
+            reader.ReadLine();
+        }
+        string randomPrompt = reader.ReadLine();
+        Console.WriteLine(randomPrompt);
+        
     }
+
+
+    
 }

@@ -1,33 +1,26 @@
 using System;
-using System.IO;
 
 public class Prompt
 {
-    public static string GetPrompt(string msg)
+    // Methods
+    public string GetPrompt()
     {
-        Console.WriteLine();
-        Console.WriteLine(msg);
-        // Count the number of lines in the text file
+        // Console.WriteLine("You have accessed the public method of GetPrompt");
+        // Count the number of lines in the Prompt text file:
         int countLines = File.ReadLines("prompts.txt").Count();
-        // Initiate new random
-        Random random = new Random();
-        int randomLine = random.Next(countLines);
+        // initiate new random
+        Random lineNumber = new Random();
+        int randomLine = lineNumber.Next(countLines);
 
-        // use streamreader to read the file
+        // use stream reader to read the file
         StreamReader reader = new StreamReader("prompts.txt");
 
-        // Loop through file until random line is reached
-        for (int i = 0; i < randomLine; i++)
-        {
+        // loop through file until random line is reached
+        for (int i = 0; i < randomLine; i++){
             reader.ReadLine();
         }
         string randomPrompt = reader.ReadLine();
-        Console.WriteLine(randomPrompt);
-        return randomPrompt;
-    }
 
-    public string getPrompt2()
-    {
-        return Prompt.GetPrompt("From getPrompt2");
+        return randomPrompt;
     }
 }
