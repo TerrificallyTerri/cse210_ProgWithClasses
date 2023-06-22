@@ -23,5 +23,14 @@ class Program
         Fraction fraction4 = new Fraction(1, 3);
         Console.WriteLine(fraction4.GetFractionsString());
         Console.WriteLine(fraction4.GetDecimalValue());
+        Console.WriteLine(fraction4.GetBottom());
+
+        // Use of only the getters and setters
+        Fraction fraction5 = new Fraction();
+        fraction5.SetTop(5);
+        fraction5.SetBottom(10);
+        Console.WriteLine($"Showing use of Getters and Setters: {fraction5.GetDecimalValue()}");
+        Console.WriteLine($"Show Bottom: {fraction5.GetBottom()}");
+        Console.WriteLine($"Show Top: {fraction5.GetTop()}");
     }
 }
