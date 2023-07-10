@@ -5,7 +5,7 @@ class Program
     static void Main(string[] args)
     {
         Console.WriteLine("Hello Develop03 World!");
-        
+
         int input = 0;
 
         string mainMenu = $@"
@@ -24,7 +24,7 @@ class Program
                         Goodbye
         ********************************************";
 
-        while (input == 1 || input == 2 || input == 3 || input == 0)
+        while (input != 4)
         {
             Console.Clear();
             Console.ForegroundColor = ConsoleColor.Red;
@@ -49,7 +49,7 @@ class Program
                     break;
 
                 case 3:
-                    Console.Clear(); 
+                    Console.Clear();
                     Console.WriteLine("\nOption 3 - All Scripture References\n");
                     GetScripture newScriptureReferences = new GetScripture(input);
                     List<string> _scriptures = newScriptureReferences._scriptureLines;
@@ -62,10 +62,10 @@ class Program
                     Console.WriteLine("Please enter a number from 1 to 3");
                     break;
             }
-        } 
-        Console.Clear(); 
-        Console.WriteLine(goodBye);    
+        }
+        Console.Clear();
+        Console.WriteLine(goodBye);
     }
     // Methods
-    
+
 }
