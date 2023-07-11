@@ -32,6 +32,7 @@ class Program
             Console.ResetColor();
             input = int.Parse(Console.ReadLine());
 
+
             switch (input)
             {
                 case 1:

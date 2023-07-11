@@ -45,7 +45,6 @@ public class TimePieces
             }
             Console.CursorVisible = true;
         }
-
     }
     public void CountDown(int countTime)
     {

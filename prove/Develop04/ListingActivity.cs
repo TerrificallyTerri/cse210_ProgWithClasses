@@ -51,7 +51,6 @@ public class ListingActivity : Activity
         }
         int entries = _userResponses.Count;
         Console.WriteLine($"You have listed {entries} items!");
-
-
+        timePieces.Spinner(10);
     }
 }

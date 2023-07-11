@@ -49,6 +49,5 @@ public class BreathingActivity : Activity
 
             Console.CursorVisible = true;
         }
-
     }
 }

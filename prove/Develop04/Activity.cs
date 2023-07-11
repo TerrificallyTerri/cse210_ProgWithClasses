@@ -72,6 +72,4 @@ public class Activity
         Console.WriteLine($"\n\nYou have completed another {_activityDuration} seconds of the {_activityName}.");
         timePieces.Elipses(1000, ". ", 3);
     }
-
-
 }
